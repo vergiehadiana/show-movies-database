@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchMovieActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb__act_search_movie__toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <!-- Query Text -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et__act_search_movie__query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusForward="@+id/btn__act_search_movie__search"
+                android:inputType="text"
+                android:hint="Search Movie" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Button Search -->
+        <Button
+            android:id="@+id/btn__act_search_movie__search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv__act_search_movie__list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
